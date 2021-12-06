@@ -30,7 +30,7 @@ wsServer.on('request',  function (request) {
             console.log('received message: ', message.utf8Data);
         }
 
-        for(key in clients) {
+        for(key in clients) {  
             clients[key].sendUTF(message.utf8Data);
             console.log('sent message to: ', clients[key])}
     }
