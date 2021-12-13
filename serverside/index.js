@@ -4,8 +4,13 @@ const http = require('http');
 const cors = require('cors');
 const { Server } = require('socket.io');
 
+app.use(express.static('build'));
 app.use=(cors());
 
+
+app.get('/', (req, res) =>{
+    res.sendFile(path.join(__dirname,'index.html'))
+})
 const server = http.createServer(app);
 
 const ioTest = new Server(server, {
