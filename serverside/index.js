@@ -41,6 +41,10 @@ ioTest.on('connection', (socket) => {
 });
 
 
+
+app.listen(process.env.PORT || 5000, ()=>{
+    console.log('connecting to port 5000');
+})
 server.listen(3001, ()=>{
     console.log("serverrrrr is running");
 
