@@ -2,6 +2,7 @@ import "./App.css";
 import { useState } from "react";
 import io from "socket.io-client";
 import Chat from "./Chats";
+import Webcam from 'react-webcam';
 
 const socket = io.connect("http://localhost:3001");
 
@@ -9,6 +10,11 @@ function App() {
   const [username, setUsername] = useState("");
   const [room, setRoom] = useState("");
   const [showChat, setShowChat] = useState(false);
+
+
+  const videoConstraints = {
+    facingMode: "user"
+};
 
   const joinRoom = () => {
     if (username !== "" && room !== "") {
@@ -19,7 +25,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1> Welcome to Delta Chat </h1>
+      <h1 style={{textAlign: "center"}}> Welcome to Delta Chat </h1>
+      
       {!showChat ? (
         <div className="joinChatContainer">
           <h3> Join Chat Now!</h3>
@@ -27,7 +34,7 @@ function App() {
             type="text"
             placeholder="Your Name"
             onChange={(e) => {
-              setUsername(e.target.value);
+              setUsername(e.target.value);  
             }}
           />
           <input
