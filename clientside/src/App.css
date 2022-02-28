@@ -3,13 +3,14 @@
   background-image: linear-gradient(rgb(0, 140, 255), white);
   color: #212121;
   font-family: "Open Sans", sans-serif;
-  display: grid;
-  place-items: center;
+  
 
 }
 
 .App h1{
   font-size: 3rem;
+  margin:0;
+  text-align: center;
 }
 body {
   margin: 0%;
@@ -57,7 +58,7 @@ body {
 }
 
 .chat-window {
-  width: 300px;
+  width: 500px;
   height: 420px;
 }
 
@@ -104,7 +105,7 @@ body {
 
 .chat-window .chat-body .message .message-content {
   min-height: 40px;
-  max-width: 120px;
+  max-width: 300px;
   background-color: #43a047;
   border-radius: 5px;
   color: white;
@@ -192,4 +193,12 @@ body {
 }
 .hide {
   opacity: 0 !important;
+}
+
+.webcam{
+  padding: 2.5rem 3.5rem;
+  float: right;
+
+
+
 }

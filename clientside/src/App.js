@@ -19,7 +19,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1> Welcome to Delta Chat </h1>
+      <h1> Mingle</h1>
       {!showChat ? (
         <div className="joinChatContainer">
           <h3> Join Chat Now!</h3>
