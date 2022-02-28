@@ -15,6 +15,11 @@ function Chat({socket, username, room}) {
     }
 
 
+    const videoConstraints = {
+        facingMode: "user"
+    };
+
+
     const sendMessage = async()=>{
         if(currMessage !== ''){
             const messageData = {
@@ -48,9 +53,11 @@ function Chat({socket, username, room}) {
         <div className="webcam">
         <Webcam width={600} height={500} videoConstraints={videoConstraints} />
         </div>
+
         <div className="chat-window">
+        
         <div className="chat-header">
-        <p> Live Chat</p>
+        <p> Mingle</p>
         </div>
         <div className="chat-body">
             <ScrollToBottom className="message-container">

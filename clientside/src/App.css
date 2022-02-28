@@ -3,6 +3,10 @@
   background-image: linear-gradient(rgb(0, 140, 255), white);
   color: #212121;
   font-family: "Open Sans", sans-serif;
+<<<<<<< HEAD
+=======
+  display: grid;
+>>>>>>> 5af5737c8a5369b36aa50915ee45cac4c1a5304c
   
 
 }
@@ -20,9 +24,8 @@ body {
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
 
 .joinChatContainer {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+  display: grid;
+  place-items:center;
 }
 
 .joinChatContainer h3 {
@@ -58,8 +61,13 @@ body {
 }
 
 .chat-window {
+<<<<<<< HEAD
   width: 500px;
   height: 420px;
+=======
+  width: 40%;
+  height: 40%;
+>>>>>>> 5af5737c8a5369b36aa50915ee45cac4c1a5304c
 }
 
 .chat-window p {
@@ -81,11 +89,10 @@ body {
 }
 
 .chat-window .chat-body {
-  height: calc(450px - (45px + 70px));
+  height: 40%;
   border: 1px solid #263238;
   background: #fff;
-
-  position: relative;
+  position: relative; 
 }
 .chat-window .chat-body .message-container {
   width: 100%;
